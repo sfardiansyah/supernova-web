@@ -5,13 +5,17 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess(),
+	preprocess: [
+		preprocess({
+			postcss: true
+		})
+	],
 
 	kit: {
 		adapter: adapter({
-            edge: false,
-            split: false,
-        }),
+			edge: false,
+			split: false
+		}),
 
 		// Override http methods in the Todo forms
 		methodOverride: {
