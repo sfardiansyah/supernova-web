@@ -7,21 +7,15 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Home | SUPERNOVA</title>
+	<meta name="description" content="Supernova web app" />
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
+    <span class="welcome">
+        <img src="Supernova.svg" alt="Supernova Logo" />
+    </span>
+	<h1 class="font-nasalization text-7xl">SUPERNOVA</h1>
 
 	<h2>
 		try editing <strong>src/routes/index.svelte</strong>

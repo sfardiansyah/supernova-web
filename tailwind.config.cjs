@@ -5,7 +5,11 @@ const config = {
     ],
 
 	theme: {
-		extend: {}
+		extend: {
+      fontFamily: {
+        nasalization: ['Nasalization', 'sans-serif']
+      }
+    }
 	},
 
 	plugins: [
