@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-    import { Navbar, NavHamburger, NavUl, NavLi } from 'flowbite-svelte';
+    import { Navbar, NavHamburger, NavUl, NavLi, Dropdown, DropdownItem, DropdownHeader, DropdownDivider, Avatar } from 'flowbite-svelte';
 </script>
 
 <header>
@@ -19,6 +19,10 @@
 	    <NavUl {hidden}>
 		    <NavLi svelte:prefetch href="/" active={$page.url.pathname === '/'}>Home</NavLi>
 		    <NavLi svelte:prefetch href="/about" active={$page.url.pathname === '/about'}>About</NavLi>
+            <Dropdown label="About" inline={true}>
+			    <DropdownItem><a href="/about/lpdp">LPDP</a></DropdownItem>
+			    <DropdownItem><a href="/about/supernova">Supernova</a></DropdownItem>
+		    </Dropdown>
 		    <NavLi svelte:prefetch href="/todos" active={$page.url.pathname === '/todos'}>Todos</NavLi>
 	    </NavUl>
     </Navbar>
