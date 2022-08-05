@@ -23,7 +23,7 @@
 			    <DropdownItem><a href="/about/lpdp">LPDP</a></DropdownItem>
 			    <DropdownItem><a href="/about/supernova">Supernova</a></DropdownItem>
 		    </Dropdown>
-		    <NavLi svelte:prefetch href="/todos" active={$page.url.pathname === '/todos'}>Todos</NavLi>
+		    <NavLi svelte:prefetch href="/awardees" active={$page.url.pathname === '/awardees'}>Meet The Awardees</NavLi>
 	    </NavUl>
     </Navbar>
 </header>

@@ -15,7 +15,7 @@
     <span class="welcome">
         <img src="Supernova.svg" alt="Supernova Logo" />
     </span>
-	<h1 class="font-nasalization text-7xl">SUPERNOVA</h1>
+	<h1 class="text-7xl">SUPERNOVA</h1>
 
 	<h2>
 		try editing <strong>src/routes/index.svelte</strong>
