@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-    import { Navbar, NavHamburger, NavUl, NavLi, Dropdown, DropdownItem, DropdownHeader, DropdownDivider, Avatar } from 'flowbite-svelte';
+    import { Navbar, NavHamburger, NavUl, NavLi, Dropdown, DropdownItem } from 'flowbite-svelte';
 </script>
 
 <header>

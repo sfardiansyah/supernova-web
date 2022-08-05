@@ -39,7 +39,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.0",
+		"@fontsource/roboto": "^4.5.7",
 		"cookie": "^0.4.1"
 	}
 }
