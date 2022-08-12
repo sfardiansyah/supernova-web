@@ -1,27 +1,36 @@
 <script context="module" lang="ts">
-	export const prerender = true;
+	  export const prerender = true;
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+    import { Button } from 'flowbite-svelte';
 </script>
 
 <svelte:head>
-	<title>Home | SUPERNOVA</title>
-	<meta name="description" content="Supernova web app" />
+	  <title>Home | SUPERNOVA</title>
+	  <meta name="description" content="Supernova web app" />
 </svelte:head>
 
+
 <section>
-    <span class="welcome">
-        <img src="Supernova.svg" alt="Supernova Logo" />
-    </span>
-	<h1 class="text-7xl">SUPERNOVA</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+    <div class="grid max-w-screen-xl mx-auto lg:grid-cols-12">
+        <div class="lg:col-span-7 place-self-center mr-auto">
+            <h1 class="text-white lg:text-8xl">Supernova</h1>
+            <p class="text-white lg:text-3xl mt-3">Persiapan Keberangkatan Lembaga Pengelola Dana Pendidikan Ke-191</p>
+            <div class="mt-9">
+                <Button pill={true} size="xl" color="alternative">Member Profile</Button>
+                <Button pill={true} size="xl" btnClass="outline-2 outline-white">Documentaries</Button>
+            </div>
+        </div>
+        <!-- <div class="lg:col-span-5 lg:flex">
+            <p>Instagram Post</p>
+            <div class="grid-cols-3 gap-10">
+                <figure>
+                    <img alt="BJ Habibie" src="/habibie.jpeg" class="object-cover w-full h-full" />
+                </figure>
+            </div>
+        </div> -->
+    </div>
 </section>
 
 <style>
@@ -31,25 +40,5 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
 	}
 </style>

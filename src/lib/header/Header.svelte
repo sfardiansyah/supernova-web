@@ -1,40 +1,26 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-    import { Navbar, NavHamburger, NavUl, NavLi, Dropdown, DropdownItem } from 'flowbite-svelte';
+    import { Navbar, NavBrand, NavHamburger, NavUl, NavLi, Dropdown, DropdownItem } from 'flowbite-svelte';
 </script>
 
-<header>
-    <Navbar class="w-full" let:hidden let:toggle>
-	    <a class="flex items-end" href="/">
-		    <img
-			    src="/Supernova.svg"
-			    class="h-6 sm:h-9"
+<header class="sticky top-0 z-40">
+    <Navbar navClass="border-gray-200 px-2 sm:px-4 py-1.5 w-full bg-blue" let:hidden let:toggle>
+        <NavBrand>
+            <img
+			    src="/supernova-white.png"
+			    class="mr-3 lg:h-20 sm:h-9"
 			    alt="Supernova Logo"
 		    />
-		    <span class="font-nasalization whitespace-nowrap text-xl font-semibold dark:text-white">
-			    UPERNOVA
-		    </span>
-	    </a>
+        </NavBrand>
 	    <NavHamburger on:click={toggle} />
 	    <NavUl {hidden}>
-		    <NavLi svelte:prefetch href="/" active={$page.url.pathname === '/'}>Home</NavLi>
-		    <NavLi svelte:prefetch href="/about" active={$page.url.pathname === '/about'}>About</NavLi>
-            <Dropdown label="About" inline={true}>
-			    <DropdownItem><a href="/about/lpdp">LPDP</a></DropdownItem>
-			    <DropdownItem><a href="/about/supernova">Supernova</a></DropdownItem>
+		    <NavLi svelte:prefetch href="/" nonActiveClass="block py-2 pr-4 pl-3 text-base text-white" active={$page.url.pathname === '/'}>Home</NavLi>
+		    <NavLi svelte:prefetch href="/about" nonActiveClass="block py-2 pr-4 pl-3 text-base text-white" active={$page.url.pathname === '/about'}>About</NavLi>
+            <Dropdown label="About" inline={true} labelClass="flex items-center justify-between text-base w-full py-2 pl-3 pr-4 font-medium text-white">
+			    <DropdownItem><a class="text-base text-white" href="/about/lpdp">LPDP</a></DropdownItem>
+			    <DropdownItem><a class="text-base text-white" href="/about/supernova">Supernova</a></DropdownItem>
 		    </Dropdown>
-		    <NavLi svelte:prefetch href="/awardees" active={$page.url.pathname === '/awardees'}>Meet The Awardees</NavLi>
+		    <NavLi svelte:prefetch href="/awardees" nonActiveClass="block py-2 pr-4 pl-3 text-base text-white" active={$page.url.pathname === '/awardees'}>Meet The Awardees</NavLi>
 	    </NavUl>
     </Navbar>
 </header>
-
-<style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	a:hover {
-		color: var(--accent-color);
-	}
-</style>

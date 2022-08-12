@@ -6,6 +6,9 @@ const config = {
 
 	theme: {
 		extend: {
+      colors: {
+        blue: "#263c69"
+      },
       fontFamily: {
         nasalization: ['Nasalization', 'sans-serif']
       }
