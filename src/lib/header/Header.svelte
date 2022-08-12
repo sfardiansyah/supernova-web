@@ -8,7 +8,7 @@
         <NavBrand>
             <img
 			    src="/supernova-white.png"
-			    class="mr-3 lg:h-20 sm:h-9"
+			    class="px-5 lg:px-1  mr-3 h-20"
 			    alt="Supernova Logo"
 		    />
         </NavBrand>
@@ -24,3 +24,14 @@
 	    </NavUl>
     </Navbar>
 </header>
+
+<style>
+header{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width:1440px;
+	margin:0 auto;
+}
+</style>
