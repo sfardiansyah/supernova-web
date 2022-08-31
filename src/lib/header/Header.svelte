@@ -5,7 +5,7 @@
 
 <header class="sticky top-0 z-40">
     <Navbar navClass="border-gray-200 px-2 sm:px-4 py-1.5 w-full bg-blue" let:hidden let:toggle>
-        <NavBrand>
+        <NavBrand href="/">
             <img
 			    src="/supernova-white.png"
 			    class="px-5 lg:px-1  mr-3 h-20"
@@ -14,13 +14,13 @@
         </NavBrand>
 	    <NavHamburger on:click={toggle} />
 	    <NavUl {hidden}>
-		    <NavLi svelte:prefetch href="/" nonActiveClass="block py-2 pr-4 pl-3 text-base text-white" active={$page.url.pathname === '/'}>Home</NavLi>
-		    <NavLi svelte:prefetch href="/about" nonActiveClass="block py-2 pr-4 pl-3 text-base text-white" active={$page.url.pathname === '/about'}>About</NavLi>
-            <Dropdown label="About" inline={true} labelClass="flex items-center justify-between text-base w-full py-2 pl-3 pr-4 font-medium text-white">
-			    <DropdownItem><a class="text-base text-white" href="/about/lpdp">LPDP</a></DropdownItem>
-			    <DropdownItem><a class="text-base text-white" href="/about/supernova">Supernova</a></DropdownItem>
+		    <NavLi href="/" activeClass="text-lg font-bold" nonActiveClass="text-white text-lg" active={$page.url.pathname === '/'} >Home</NavLi>
+			<NavLi href="/about" activeClass="text-lg font-bold" nonActiveClass="text-white text-lg" active={$page.url.pathname === '/about'} >Documentaries</NavLi>
+			<NavLi svelte:prefetch href="/awardees" activeClass="text-lg font-bold" nonActiveClass="text-white text-lg" active={$page.url.pathname === '/awardees'}>Meet The Awardees</NavLi>
+			<Dropdown label="About" inline={true} activeClass="text-lg font-bold" labelClass="flex items-center justify-between text-lg font-medium text-white">
+			    <DropdownItem><a class="text-lg text-black" href="/about/lpdp">LPDP</a></DropdownItem>
+			    <DropdownItem><a class="text-lg text-black" href="/about/supernova">Supernova</a></DropdownItem>
 		    </Dropdown>
-		    <NavLi svelte:prefetch href="/awardees" nonActiveClass="block py-2 pr-4 pl-3 text-base text-white" active={$page.url.pathname === '/awardees'}>Meet The Awardees</NavLi>
 	    </NavUl>
     </Navbar>
 </header>
@@ -31,7 +31,6 @@ header{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-width:1440px;
 	margin:0 auto;
 }
-</style>
+</style>	

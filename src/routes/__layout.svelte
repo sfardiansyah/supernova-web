@@ -13,11 +13,19 @@
 </main>
 
 <Footer footerType="custom" customClass="p-4 sm:p-6 bg-neutral-700">
-    <div class="md:flex md:justify-between">
+    <div class="container max-w-8xl mx-auto md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="/">
-                <h1 class="text-white h-16">Supernova</h1>
+                <h1 class="text-white h-16 lg:text-6xl text-left">Supernova</h1>
             </a>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div>
+                    <img src="/supernova-white.png" class="px-5 lg:px-1 xl:h-28"alt="Supernova Logo Horizontal White-01.png"/>
+                </div>
+                <div>
+                <img src="/Logo.png" class="px-5 lg:px-1 lg:mt-6 xl:h-16"alt="Supernova Logo"/>
+                </div>
+            </div>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -41,16 +49,9 @@
                     <FooterLink liClass="mb-4" href="/">Terms & Conditions</FooterLink>
                 </FooterLinkGroup>
             </div>
-        </div>
-    </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div class="sm:flex sm:items-center sm:justify-between">
-        <FooterCopyright href="/" by="Supernova" />
-        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <FooterIcon href="/" class="text-gray-400 hover:text-gray-900" icon={FacebookBrand} />
-            <FooterIcon href="/" class="text-gray-400 hover:text-gray-900" icon={InstagramBrand} />
-            <FooterIcon href="/" class="text-gray-400 hover:text-gray-900" icon={TwitterBrand} />
-            <FooterIcon href="/" class="text-gray-400 hover:text-gray-900" icon={GithubBrand} />
+            <div>
+            <FooterCopyright spanClass="" href="/" by="Supernova" />
+            </div>
         </div>
     </div>
 </Footer>

@@ -32,7 +32,9 @@
 body {
 	min-height: 100vh;
 	margin: 0;
-	background-color: var(--primary-color);
+	/* background-color: var(--primary-color); */
+	background:url('/static/Dodecagon.png');
+	background: linear-gradient(145.47deg, #263C69 29.12%, #5B1972 103.72%);
 	/* background: linear-gradient( */
 	/* 	180deg, */
 	/* 	var(--primary-color) 0%, */
@@ -73,6 +75,10 @@ p {
 h1 {
     font-family: 'Nasalization', sans-serif; 
     text-transform: uppercase;
+}
+
+h2{
+	font-family: 'Nasalization', sans-serif; 
 }
 
 p {
